@@ -4,13 +4,13 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace Lab02.Controllers
+namespace EnrollmentApplication.Controllers
 {
     public class HomeController : Controller
     {
         public ActionResult Index()
         {
-            return View("Other/Details");
+            return View();
         }
 
         public ActionResult About()
@@ -23,13 +23,6 @@ namespace Lab02.Controllers
         public ActionResult Contact()
         {
             ViewBag.Message = "Your contact page.";
-
-            return View();
-        }
-
-        public ActionResult Product()
-        {
-            ViewBag.Message = "Your Product page.";
 
             return View();
         }

@@ -4,18 +4,18 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace Lab02.Controllers
+namespace MvcMusicStore.Controllers
 {
     public class HomeController : Controller
     {
         public ActionResult Index()
         {
-            return View("Other/Details");
+            return View();
         }
 
         public ActionResult About()
         {
-            ViewBag.Message = "Your application description page.";
+            ViewBag.Message = "I like cake!";
 
             return View();
         }
@@ -26,11 +26,8 @@ namespace Lab02.Controllers
 
             return View();
         }
-
-        public ActionResult Product()
+        public ActionResult Edit()
         {
-            ViewBag.Message = "Your Product page.";
-
             return View();
         }
     }
