@@ -13,5 +13,10 @@ namespace EnrollmentApplication.Models
         public virtual int CourseId { get; set; }
         public virtual Course Course { get; set; }
         public virtual string Grade { get; set; }
+        public virtual bool IsActive { get; set; }
+        public virtual string AssignedCampus { get; set; }
+        public virtual string EnrollmentSemster { get; set; }
+        public virtual int EnrollmentYear { get; set; }
     }
 }
+
