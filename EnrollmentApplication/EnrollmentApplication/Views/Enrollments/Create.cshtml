@@ -16,34 +16,18 @@
     <hr />
     @Html.ValidationSummary(true, "", new { @class = "text-danger" })
     <div class="form-group">
-        @Html.LabelFor(model => model.Student.FirstName, "Students First Name", htmlAttributes: new { @class = "control-label col-md-2" })
+        @Html.LabelFor(model => model.StudentId, "StudentId", htmlAttributes: new { @class = "control-label col-md-2" })
         <div class="col-md-10">
-            @Html.TextBoxFor(model => model.Student.FirstName, new { htmlAttributes = new { @class = "form-control" } })
-            @Html.ValidationMessageFor(model => model.Student.FirstName, "", new { @class = "text-danger" })
+            @Html.DropDownList("StudentId", null, htmlAttributes: new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.StudentId, "", new { @class = "text-danger" })
         </div>
     </div>
 
     <div class="form-group">
-        @Html.LabelFor(model => model.Student.LastName, "Students Last Name", htmlAttributes: new { @class = "control-label col-md-2" })
+        @Html.LabelFor(model => model.CourseId, "CourseId", htmlAttributes: new { @class = "control-label col-md-2" })
         <div class="col-md-10">
-            @Html.TextBoxFor(model => model.Student.LastName, new { htmlAttributes = new { @class = "form-control" } })
-            @Html.ValidationMessageFor(model => model.Student.LastName, "", new { @class = "text-danger" })
-        </div>
-    </div>
-
-    <div class="form-group">
-        @Html.LabelFor(model => model.CourseId, "Course Id", htmlAttributes: new { @class = "control-label col-md-2" })
-        <div class="col-md-10">
-            @Html.TextBoxFor(model => model.CourseId, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.DropDownList("CourseId", null, htmlAttributes: new { @class = "form-control" })
             @Html.ValidationMessageFor(model => model.CourseId, "", new { @class = "text-danger" })
-        </div>
-    </div>
-
-    <div class="form-group">
-        @Html.LabelFor(model => model.Course.Title, "Course Title", htmlAttributes: new { @class = "control-label col-md-2" })
-        <div class="col-md-10">
-            @Html.TextBoxFor(model => model.Course.Title, new { htmlAttributes = new { @class = "form-control" } })
-            @Html.ValidationMessageFor(model => model.Course.Title, "", new { @class = "text-danger" })
         </div>
     </div>
 

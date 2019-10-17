@@ -39,8 +39,8 @@ namespace EnrollmentApplication.Controllers
         // GET: Enrollments/Create
         public ActionResult Create()
         {
-            ViewBag.Course = new SelectList(db.Courses, "Id", "Title");
-            ViewBag.Student = new SelectList(db.Students, "LastName");
+            ViewBag.CourseId = new SelectList(db.Courses, "Id", "Title");
+            ViewBag.StudentId = new SelectList(db.Students, "Id", "LastName");
             return View();
         }
 
@@ -49,7 +49,7 @@ namespace EnrollmentApplication.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Student.FirstName, Student.LastName,Grade,IsActive,AssignedCampus,EnrollmentSemester,EnrollmentYear")] Enrollment enrollment)
+        public ActionResult Create([Bind(Include = "StudentId,CourseId,Grade,IsActive,AssignedCampus,EnrollmentSemster,EnrollmentYear")] Enrollment enrollment)
         {
             if (ModelState.IsValid)
             {
@@ -85,7 +85,7 @@ namespace EnrollmentApplication.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,StudentId,CourseId,Grade,IsActive,AssignedCampus,EnrollmentSemester,EnrollmentYear")] Enrollment enrollment)
+        public ActionResult Edit([Bind(Include = "Id,StudentId,CourseId,Grade,IsActive,AssignedCampus,EnrollmentSemster,EnrollmentYear")] Enrollment enrollment)
         {
             if (ModelState.IsValid)
             {
