@@ -25,6 +25,7 @@ namespace EnrollmentApplication.Models
         public virtual string EnrollmentSemster { get; set; }
         [Required]
         [Range(2018,2090)]
+        [Display(Name ="Enrollment Year")]
         public virtual int EnrollmentYear { get; set; }
     }
 }
