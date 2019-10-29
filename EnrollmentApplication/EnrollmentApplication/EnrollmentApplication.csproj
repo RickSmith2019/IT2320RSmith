@@ -171,14 +171,41 @@
     <Compile Include="Controllers\EnrollmentsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\StudentsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201910232013043_Lab07.cs" />
+    <Compile Include="Migrations\201910232013043_Lab07.Designer.cs">
+      <DependentUpon>201910232013043_Lab07.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201910281527511_Update1.cs" />
+    <Compile Include="Migrations\201910281527511_Update1.Designer.cs">
+      <DependentUpon>201910281527511_Update1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201910281617236_Update2.cs" />
+    <Compile Include="Migrations\201910281617236_Update2.Designer.cs">
+      <DependentUpon>201910281617236_Update2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201910282018445_Update3.cs" />
+    <Compile Include="Migrations\201910282018445_Update3.Designer.cs">
+      <DependentUpon>201910282018445_Update3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201910291529403_Update4.cs" />
+    <Compile Include="Migrations\201910291529403_Update4.Designer.cs">
+      <DependentUpon>201910291529403_Update4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201910291538271_Update5.cs" />
+    <Compile Include="Migrations\201910291538271_Update5.Designer.cs">
+      <DependentUpon>201910291538271_Update5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Course.cs" />
     <Compile Include="Models\Enrollment.cs" />
     <Compile Include="Models\EnrollmentDB.cs" />
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\InvalidChars.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Student.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -193,6 +220,8 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Scripts\Apps\CourseScripts.js" />
+    <Content Include="Scripts\Apps\StudentScripts.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
@@ -201,6 +230,8 @@
     <Content Include="Scripts\jquery-3.3.1.slim.js" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
@@ -245,6 +276,14 @@
     <Content Include="Views\Enrollments\Details.cshtml" />
     <Content Include="Views\Enrollments\Edit.cshtml" />
     <Content Include="Views\Enrollments\Index.cshtml" />
+    <Content Include="Views\Students\Create.cshtml" />
+    <Content Include="Views\Students\Delete.cshtml" />
+    <Content Include="Views\Students\Details.cshtml" />
+    <Content Include="Views\Students\Edit.cshtml" />
+    <Content Include="Views\Students\Index.cshtml" />
+    <Content Include="Views\Students\_StudentOfTheMonth.cshtml" />
+    <Content Include="Views\Enrollments\_StudentSearch.cshtml" />
+    <Content Include="Views\Enrollments\_CourseSearch.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -261,6 +300,26 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.3.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201910232013043_Lab07.resx">
+      <DependentUpon>201910232013043_Lab07.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201910281527511_Update1.resx">
+      <DependentUpon>201910281527511_Update1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201910281617236_Update2.resx">
+      <DependentUpon>201910281617236_Update2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201910282018445_Update3.resx">
+      <DependentUpon>201910282018445_Update3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201910291529403_Update4.resx">
+      <DependentUpon>201910291529403_Update4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201910291538271_Update5.resx">
+      <DependentUpon>201910291538271_Update5.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
